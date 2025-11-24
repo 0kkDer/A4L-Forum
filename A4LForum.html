@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Creator Profile - Aster 4 Life</title>
+    <style>
+        /* Reset dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Abu-abu muda */
+            color: #333;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header */
+        header {
+            background-color: #555; /* Abu-abu gelap */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Bagian About */
+        #about {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #e0e0e0; /* Abu-abu lebih terang */
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+
+        /* Galeri Konten */
+        #gallery {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #d3d3d3; /* Abu-abu sedang */
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .content-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .content-item {
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .content-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .content-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Bagian Tim */
+        #team {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #f0f0f0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 150px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #555; /* Abu-abu gelap */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+
+        footer a {
+            color: #ccc; /* Abu-abu terang */
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aster 4 Life</h1>
+    </header>
+    
+    <section id="about">
+        <h2>About A4L</h2>
+        <p>Hi! Aster 4 Life, a community that many memories, we create content to inspire and entertain our community.</p>
+        <img src="https://i.pinimg.com/736x/de/b7/d4/deb7d4ca9ee2237531c5f339ed600c2e.jpg" alt="Profile Picture" class="profile-pic">
+    </section>
+    
+    <section id="gallery">
+        <h2>Content Gallery</h2>
+        <div class="content-grid">
+            <div class="content-item">
+                <img src="https://i.pinimg.com/736x/5a/73/93/5a7393ab3058b00119b4d692c1c4b1d3.jpg" alt="Video 1">
+                <p>Astolfo at Comifuro [November 15 2025]</p>
+            </div>
+            <div class="content-item">
+                <img src="https://via.placeholder.com/200x150" alt="Video 2">
+                <p>Latest Gadget Review</p>
+            </div>
+            <div class="content-item">
+                <img src="https://via.placeholder.com/200x150" alt="Video 3">
+                <p>Daily Vlog: A Day in My Life</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="team">
+        <h2>Our Team</h2>
+        
+        <!-- Team Developer (5 orang: Bian, Derry, Aulia, Ibam, Ehan) -->
+        <h3>Team Developer</h3>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://cdn.discordapp.com/avatars/841338526124605510/76a6d8208e8eee73909894c83ebc2b42.png?size=1024" alt="Bian">
+                <h3>TB</h3>
+                <p>Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/1b/b4/3d/1bb43d61ac82393c8d484ec98ae9ef80.jpg" alt="Derry">
+                <h3>Mbut</h3>
+                <p>Owner</p>
+            </div>
+            <div class="team-member">
+                <img src="https://cdn.discordapp.com/avatars/857208468733296661/808bc200fecbfc09a0d42edb80f4431d.png?size=1024" alt="Aulia">
+                <h3>Aul</h3>
+                <p>Co Owner</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/cb/9e/8a/cb9e8a885270c5590a887452bd6e64e6.jpg" alt="Ibam">
+                <h3>Bams</h3>
+                <p>Head Moderator</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/55/60/5f/55605f455f0ec017b32dbfdb22de8f71.jpg" alt="Ehan">
+                <h3>Ehan</h3>
+                <p>Moderator</p>
+            </div>
+        </div>
+        
+        <!-- Team Member (6 orang) -->
+        <h3>Team Member</h3>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/05/e7/fa/05e7faaa70861cd2bd91ca8249a72f9d.jpg" alt="Member 1">
+                <h3>Patir</h3>
+                <p>Member</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/70/0a/76/700a767298cf5eefa5e1e6e135876aea.jpg" alt="Member 2">
+                <h3>Qolby</h3>
+                <p>Member</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/e7/01/82/e70182c3db17d433d626d0de2c7fdc68.jpg" alt="Member 3">
+                <h3>Ido</h3>
+                <p>Member</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/76/81/c4/7681c418b56d498da0daf93520a428d5.jpg" alt="Member 4">
+                <h3>Pangki</h3>
+                <p>Member</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/2f/ed/dd/2feddd1446dfcdd19150b608327670a1.jpg" alt="Member 5">
+                <h3>Sykes</h3>
+                <p>Member</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.pinimg.com/736x/a0/58/05/a05805d1ff0d7d958d78e4ae60489668.jpg" alt="Member 6">
+                <h3>Aji</h3>
+                <p>Member</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Aster 4 Life.</p>
+        <a href="https://youtube.com" target="_blank">YouTube</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://discord.com" target="_blank">Discord</a> |
+        <a href="https://tiktok.com" target="_blank">TikTok</a>
+    </footer>
+</body>
+</html>
