@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aster 4 Life</title>
+    <!-- Added meta description for better SEO -->
+    <meta name="description" content="Aster 4 Life: A community full of memories, creating content to inspire and entertain.">
+    <meta name="keywords" content="Aster 4 Life, community, content, inspiration, entertainment">
+    <!-- Added favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.pinimg.com/736x/94/8c/e6/948ce6301fe22467dfeeff572e17489e.jpg">
     <style>
-
-        <!-- Favicon Logo -->
-  <link rel="icon" type="image/jpeg" href="https://i.pinimg.com/736x/de/b7/d4/deb7d4ca9ee2237531c5f339ed600c2e.jpg" />
-        
         /* Reset dasar */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Abu-abu muda */
+            background: linear-gradient(to bottom, #e0f7ff 0%, #1e3a8a 100%); /* Gradient biru terang ke biru tua */
+            background-size: cover;
+            background-attachment: fixed;
             color: #333;
             line-height: 1.6;
             animation: fadeIn 1s ease-in-out;
@@ -28,7 +31,7 @@
 
         /* Header */
         header {
-            background-color: #555; /* Abu-abu gelap */
+            background: linear-gradient(to right, #4a90e2 0%, #1e3a8a 100%); /* Gradient biru terang ke biru tua */
             color: white;
             text-align: center;
             padding: 50px 20px;
@@ -48,7 +51,7 @@
         #about {
             padding: 40px 20px;
             text-align: center;
-            background-color: #e0e0e0; /* Abu-abu lebih terang */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
             margin: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -71,7 +74,7 @@
         #gallery {
             padding: 40px 20px;
             text-align: center;
-            background-color: #d3d3d3; /* Abu-abu sedang */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
             animation: fadeIn 2.5s ease-in-out;
         }
 
@@ -82,7 +85,7 @@
         }
 
         .content-item {
-            background-color: #e0e0e0;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             margin: 10px;
             border-radius: 8px;
@@ -91,7 +94,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .content-item:hover {
+        .content-item:hover, .content-item:focus {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
@@ -111,7 +114,7 @@
         #team {
             padding: 40px 20px;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: rgba(255, 255, 255, 0.9);
             animation: fadeIn 3s ease-in-out;
         }
 
@@ -122,7 +125,7 @@
         }
 
         .team-member {
-            background-color: #e0e0e0;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             margin: 10px;
             border-radius: 8px;
@@ -132,7 +135,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .team-member:hover {
+        .team-member:hover, .team-member:focus {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
@@ -151,7 +154,7 @@
 
         /* Footer */
         footer {
-            background-color: #555; /* Abu-abu gelap */
+            background: linear-gradient(to right, #1e3a8a 0%, #4a90e2 100%); /* Gradient biru tua ke biru terang */
             color: white;
             text-align: center;
             padding: 20px;
@@ -159,7 +162,7 @@
         }
 
         footer a {
-            color: #ccc; /* Abu-abu terang */
+            color: #e0f7ff; /* Light blue */
             text-decoration: none;
             margin: 0 10px;
             transition: color 0.3s ease;
@@ -169,33 +172,51 @@
             color: #fff;
             text-decoration: underline;
         }
+
+        /* Responsiveness for mobile */
+        @media (max-width: 768px) {
+            .content-grid, .team-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content-item, .team-member {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Aster 4 Life</h1>
+        <p>Welcome to our community hub!</p>
     </header>
     
     <section id="about">
         <h2>About A4L</h2>
-        <p>Hi! Aster 4 Life, a community that many memories, we create content to inspire and entertain our community.</p>
-        <img src="https://i.pinimg.com/736x/de/b7/d4/deb7d4ca9ee2237531c5f339ed600c2e.jpg" alt="Profile Picture" class="profile-pic">
+        <p>Hi! Aster 4 Life is a community full of memories. We create content to inspire and entertain our audience.</p>
+        <img src="https://i.pinimg.com/736x/dc/3f/b5/dc3fb5fa0cfbb034c55fe65a96661fd9.jpg" alt="Aster 4 Life profile picture" class="profile-pic">
     </section>
     
     <section id="gallery">
         <h2>Content Gallery</h2>
         <div class="content-grid">
             <div class="content-item">
-                <img src="https://i.pinimg.com/736x/5a/73/93/5a7393ab3058b00119b4d692c1c4b1d3.jpg" alt="Video 1">
-                <p>Astolfo at Comifuro [November 15 2025]</p>
+                <img src="https://i.pinimg.com/736x/5a/73/93/5a7393ab3058b00119b4d692c1c4b1d3.jpg" alt="Astolfo cosplay at Comifuro event">
+                <p>Astolfo at Comifuro [November 15, 2025]</p>
             </div>
             <div class="content-item">
-                <img src="https://via.placeholder.com/200x150" alt="Video 2">
-                <p>Picture 2</p>
+                <img src="https://i.pinimg.com/736x/a0/9f/e2/a09fe2acc5c92c7d8eee62b95c62d69d.jpg" alt="Placeholder for second content item">
+                <p>Discord Roblox Horror [2024]</p>
             </div>
             <div class="content-item">
-                <img src="https://via.placeholder.com/200x150" alt="Video 3">
-                <p>Picture 3</p>
+                <img src="https://i.pinimg.com/736x/8a/78/2b/8a782bd857dc4e5cfe4582b57ffeead4.jpg" alt="Placeholder for third content item">
+                <p>Special guest from out of town [September 27 2025]</p>
             </div>
         </div>
     </section>
@@ -207,27 +228,27 @@
         <h3>Team Developer</h3>
         <div class="team-grid">
             <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/841338526124605510/76a6d8208e8eee73909894c83ebc2b42.png?size=1024" alt="Bian">
+                <img src="https://cdn.discordapp.com/avatars/841338526124605510/76a6d8208e8eee73909894c83ebc2b42.png?size=1024" alt="Avatar of TB, Founder">
                 <h3>TB</h3>
                 <p>Founder</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/1b/b4/3d/1bb43d61ac82393c8d484ec98ae9ef80.jpg" alt="Derry">
+                <img src="https://i.pinimg.com/736x/1b/b4/3d/1bb43d61ac82393c8d484ec98ae9ef80.jpg" alt="Avatar of Mbut, Owner">
                 <h3>Mbut</h3>
                 <p>Owner</p>
             </div>
             <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/857208468733296661/808bc200fecbfc09a0d42edb80f4431d.png?size=1024" alt="Aulia">
+                <img src="https://cdn.discordapp.com/avatars/857208468733296661/808bc200fecbfc09a0d42edb80f4431d.png?size=1024" alt="Avatar of Aul, Co-Owner">
                 <h3>Aul</h3>
-                <p>Co Owner</p>
+                <p>Co-Owner</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/cb/9e/8a/cb9e8a885270c5590a887452bd6e64e6.jpg" alt="Ibam">
+                <img src="https://i.pinimg.com/736x/cb/9e/8a/cb9e8a885270c5590a887452bd6e64e6.jpg" alt="Avatar of Bams, Head Moderator">
                 <h3>Bams</h3>
                 <p>Head Moderator</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/55/60/5f/55605f455f0ec017b32dbfdb22de8f71.jpg" alt="Ehan">
+                <img src="https://i.pinimg.com/736x/55/60/5f/55605f455f0ec017b32dbfdb22de8f71.jpg" alt="Avatar of Ehan, Moderator">
                 <h3>Ehan</h3>
                 <p>Moderator</p>
             </div>
@@ -237,32 +258,32 @@
         <h3>Team Member</h3>
         <div class="team-grid">
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/05/e7/fa/05e7faaa70861cd2bd91ca8249a72f9d.jpg" alt="Member 1">
+                <img src="https://i.pinimg.com/736x/05/e7/fa/05e7faaa70861cd2bd91ca8249a72f9d.jpg" alt="Avatar of Patir, Member">
                 <h3>Patir</h3>
                 <p>Member</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/70/0a/76/700a767298cf5eefa5e1e6e135876aea.jpg" alt="Member 2">
+                <img src="https://i.pinimg.com/736x/70/0a/76/700a767298cf5eefa5e1e6e135876aea.jpg" alt="Avatar of Qolby, Member">
                 <h3>Qolby</h3>
                 <p>Member</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/e7/01/82/e70182c3db17d433d626d0de2c7fdc68.jpg" alt="Member 3">
+                <img src="https://i.pinimg.com/736x/e7/01/82/e70182c3db17d433d626d0de2c7fdc68.jpg" alt="Avatar of Ido, Member">
                 <h3>Ido</h3>
                 <p>Member</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/76/81/c4/7681c418b56d498da0daf93520a428d5.jpg" alt="Member 4">
+                <img src="https://i.pinimg.com/736x/76/81/c4/7681c418b56d498da0daf93520a428d5.jpg" alt="Avatar of Pangki, Member">
                 <h3>Pangki</h3>
                 <p>Member</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/2f/ed/dd/2feddd1446dfcdd19150b608327670a1.jpg" alt="Member 5">
+                <img src="https://i.pinimg.com/736x/2f/ed/dd/2feddd1446dfcdd19150b608327670a1.jpg" alt="Avatar of Sykes, Member">
                 <h3>Sykes</h3>
                 <p>Member</p>
             </div>
             <div class="team-member">
-                <img src="https://i.pinimg.com/736x/a0/58/05/a05805d1ff0d7d958d78e4ae60489668.jpg" alt="Member 6">
+                <img src="https://i.pinimg.com/736x/a0/58/05/a05805d1ff0d7d958d78e4ae60489668.jpg" alt="Avatar of Aji, Member">
                 <h3>Aji</h3>
                 <p>Member</p>
             </div>
@@ -270,15 +291,11 @@
     </section>
     
     <footer>
-        <p>&copy; 2025 Aster 4 Life.</p>
-        <a href="https://www.youtube.com/channel/UCAtE7Gzbm4sW2FhstpqCDcg" target="_blank">YouTube</a> |
-        <a href="https://instagram.com" target="_blank">Instagram</a> |
-        <a href="https://discord.gg/y2E2WGQz2D" target="_blank">Discord</a> |
-        <a href=https://www.tiktok.com/@aster4lifee?_r=1&_t=ZS-91fdYptruaG" target="_blank">TikTok</a>
+        <p>&copy; 2024 Aster 4 Life. All rights reserved.</p>
+        <a href="https://www.youtube.com/channel/UCAtE7Gzbm4sW2FhstpqCDcg" target="_blank" rel="noopener noreferrer">YouTube</a> |
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://discord.gg/y2E2WGQz2D" target="_blank" rel="noopener noreferrer">Discord</a> |
+        <a href="https://www.tiktok.com/@aster4lifee?_r=1&_t=ZS-91fdYptruaG" target="_blank" rel="noopener noreferrer">TikTok</a>
     </footer>
 </body>
 </html>
-
-
-
-
