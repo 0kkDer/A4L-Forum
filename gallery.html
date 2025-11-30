@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aster 4 Life</title>
-    <meta name="description" content="Aster 4 Life: A community full of memories, creating content to inspire and entertain.">
-    <meta name="keywords" content="Aster 4 Life, community, content, inspiration, entertainment">
+    <title>Gallery - Aster 4 Life</title>
+    <meta name="description" content="Explore the Aster 4 Life gallery.">
+    <meta name="keywords" content="Aster 4 Life, gallery, images">
     <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/94/8c/e6/948ce6301fe22467dfeeff572e17489e.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts untuk tema modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; }
         body {
@@ -16,45 +17,51 @@
             background: linear-gradient(135deg, #e0f7ff 0%, #1e3a8a 50%, #0f172a 100%);
             background-size: cover; background-attachment: fixed;
             color: #333; line-height: 1.6;
-            animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: bounceIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes bounceIn { 0% { opacity: 0; transform: translateY(50px) scale(0.8); } 50% { transform: translateY(-10px) scale(1.05); } 100% { opacity: 1; transform: translateY(0) scale(1); } }
         header {
             background: linear-gradient(45deg, #4a90e2 0%, #1e3a8a 50%, #0f172a 100%);
-            color: white; text-align: center; padding: 80px 20px;
+            color: white; text-align: center; padding: 100px 20px;
             position: relative; overflow: hidden;
-            animation: fadeIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: bounceIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            transform-style: preserve-3d;
         }
         header::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255, 255, 255, 0.1); animation: shimmer 4s infinite ease-in-out;
+            background: rgba(255, 255, 255, 0.1); animation: shimmer 5s infinite ease-in-out;
+            transform: translateZ(-1px) scale(1.1);
         }
-        @keyframes shimmer { 0% { transform: translateX(-100%) skewX(-15deg); } 100% { transform: translateX(100%) skewX(-15deg); } }
-        header h1 { margin: 0; font-size: 3.5em; font-weight: 700; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); letter-spacing: 2px; }
-        header p { font-size: 1.4em; margin-top: 15px; font-weight: 300; }
-        nav { text-align: center; padding: 15px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2); }
+        @keyframes shimmer { 0% { transform: translateX(-120%) skewX(-20deg) scale(1.1); } 100% { transform: translateX(120%) skewX(-20deg) scale(1.1); } }
+        header h1 { margin: 0; font-size: 4em; font-weight: 900; text-shadow: 4px 4px 8px rgba(0,0,0,0.5); letter-spacing: 3px; transform: translateZ(10px); }
+        header p { font-size: 1.5em; margin-top: 20px; font-weight: 300; transform: translateZ(5px); }
+        nav { text-align: center; padding: 20px; background: rgba(255,255,255,0.1); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.3); }
         nav a {
-            margin: 0 20px; color: #e0f7ff; text-decoration: none; font-weight: 600; font-size: 1.1em;
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            opacity: 0; animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            margin: 0 25px; color: #e0f7ff; text-decoration: none; font-weight: 700; font-size: 1.2em;
+            transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            opacity: 0; animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
             position: relative;
         }
-        nav a:nth-child(1) { animation-delay: 0.4s; } /* Home */
-        nav a:nth-child(2) { animation-delay: 0.8s; } /* Gallery */
-        nav a:nth-child(3) { animation-delay: 1.2s; } /* Team */
-        nav a::after { content: ''; position: absolute; bottom: -5px; left: 50%; width: 0; height: 2px; background: #4a90e2; transition: all 0.6s ease; transform: translateX(-50%); }
-        nav a:hover::after { width: 100%; }
-        nav a:hover { color: #fff; transform: translateY(-5px); text-shadow: 0 0 20px rgba(74, 144, 226, 0.8); }
+        nav a:nth-child(1) { animation-delay: 0.5s; } /* Home */
+        nav a:nth-child(2) { animation-delay: 1s; } /* Gallery */
+        nav a:nth-child(3) { animation-delay: 1.5s; } /* Team */
+        nav a::after { content: ''; position: absolute; bottom: -8px; left: 50%; width: 0; height: 3px; background: #4a90e2; transition: all 0.7s ease; transform: translateX(-50%); border-radius: 2px; }
+        nav a:hover::after { width: 120%; }
+        nav a:hover { color: #fff; transform: translateY(-8px) scale(1.05); text-shadow: 0 0 25px rgba(74, 144, 226, 1); box-shadow: 0 10px 30px rgba(74, 144, 226, 0.5); }
         #gallery {
-            padding: 60px 30px; text-align: center;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            animation: fadeIn 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 1px solid rgba(255,255,255,0.3);
+            padding: 70px 40px; text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(25px);
+            margin: 50px auto; max-width: 1200px;
+            border-radius: 30px; box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            animation: bounceIn 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 2px solid rgba(255,255,255,0.4);
             position: relative;
+            transform-style: preserve-3d;
         }
-        #gallery::before { content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: linear-gradient(45deg, #4a90e2, #1e3a8a); border-radius: 30px; z-index: -1; opacity: 0.1; }
+        #gallery::before { content: ''; position: absolute; top: -15px; left: -15px; right: -15px; bottom: -15px; background: linear-gradient(45deg, #4a90e2, #1e3a8a); border-radius: 35px; z-index: -1; opacity: 0.15; transform: translateZ(-5px); }
+        #gallery:hover { transform: rotateX(5deg) rotateY(5deg) translateZ(20px); box-shadow: 0 35px 80px rgba(0,0,0,0.4); }
         .content-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px; max-width: 1200px; margin: 0 auto;
@@ -63,84 +70,51 @@
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(15px);
             padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             border: 1px solid rgba(255,255,255,0.4);
-            opacity: 0; animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            opacity: 0; animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
             position: relative; overflow: hidden;
+            transform-style: preserve-3d;
         }
-        .content-item:nth-child(1) { animation-delay: 0.4s; }
-        .content-item:nth-child(2) { animation-delay: 0.8s; }
-        .content-item:nth-child(3) { animation-delay: 1.2s; }
-        .content-item:hover, .content-item:focus { transform: translateY(-15px) rotate(1deg); box-shadow: 0 25px 50px rgba(0,0,0,0.4); filter: brightness(1.05); }
-        .content-item img {
+        .content-item:nth-child(1) { animation-delay: 0.5s; }
+        .content-item:nth-child(2) { animation-delay: 1s; }
+        .content-item:nth-child(3) { animation-delay: 1.5s; }
+        .content-item:nth-child(4) { animation-delay: 2s; }
+        .content-item:nth-child(5) { animation-delay: 2.5s; }
+        .content-item:nth-child(6) { animation-delay: 3s; }
+        .content-item:nth-child(7) { animation-delay: 3.5s; }
+        .content-item:nth-child(8) { animation-delay: 4s; }
+        .content-item:nth-child(9) { animation-delay: 4.5s; }
+        .content-item:hover, .content-item:focus { transform: translateY(-15px) rotate(10deg) scale(1.05); box-shadow: 0 25px 50px rgba(0,0,0,0.4); filter: brightness(1.2); }
+        .content-item img, .content-item video, .content-item iframe {
             width: 100%; height: auto; border-radius: 15px;
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
         }
-        .content-item img:hover { transform: scale(1.1) rotate(2deg); box-shadow: 0 10px 25px rgba(74, 144, 226, 0.6); }
-        #team {
-            padding: 60px 30px; text-align: center;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            animation: fadeIn 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 1px solid rgba(255,255,255,0.3);
-            position: relative;
-        }
-        #team::before { content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; background: linear-gradient(45deg, #4a90e2, #1e3a8a); border-radius: 30px; z-index: -1; opacity: 0.1; }
-        .team-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px; max-width: 1200px; margin: 0 auto;
-        }
-        .team-member {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(15px);
-            padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 1px solid rgba(255,255,255,0.4);
-            opacity: 0; animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-            position: relative; overflow: hidden;
-        }
-        .team-member:nth-child(1) { animation-delay: 0.4s; }
-        .team-member:nth-child(2) { animation-delay: 0.8s; }
-        .team-member:nth-child(3) { animation-delay: 1.2s; }
-        .team-member:nth-child(4) { animation-delay: 1.6s; }
-        .team-member:nth-child(5) { animation-delay: 2.0s; }
-        .team-member:nth-child(6) { animation-delay: 2.4s; }
-        .team-member:nth-child(7) { animation-delay: 2.8s; }
-        .team-member:nth-child(8) { animation-delay: 3.2s; }
-        .team-member:nth-child(9) { animation-delay: 3.6s; }
-        .team-member:nth-child(10) { animation-delay: 4.0s; }
-        .team-member:nth-child(11) { animation-delay: 4.4s; }
-        .team-member:hover, .team-member:focus { transform: translateY(-15px) rotate(2deg); box-shadow: 0 25px 50px rgba(0,0,0,0.4); filter: brightness(1.05); }
-        .team-member img {
-            width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px;
-            border: 4px solid #4a90e2; transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
-        }
-        .team-member img:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 10px 25px rgba(74, 144, 226, 0.6); }
+        .content-item img:hover, .content-item video:hover, .content-item iframe:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 10px 25px rgba(74, 144, 226, 1); filter: brightness(1.2); }
         footer {
             background: linear-gradient(45deg, #0f172a 0%, #1e3a8a 50%, #4a90e2 100%);
-            color: white; text-align: center; padding: 40px 20px;
-            animation: fadeIn 4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 -10px 40px rgba(0,0,0,0.3);
+            color: white; text-align: center; padding: 50px 20px;
+            animation: bounceIn 4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 -15px 50px rgba(0,0,0,0.4);
         }
-        footer a { color: #e0f7ff; text-decoration: none; margin: 0 20px; font-weight: 600; transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative; }
-        footer a::before { content: ''; position: absolute; top: -5px; left: 50%; width: 0; height: 2px; background: #4a90e2; transition: all 0.6s ease; transform: translateX(-50%); }
-        footer a:hover::before { width: 100%; }
-        footer a:hover { color: #fff; transform: translateY(-3px); text-shadow: 0 0 15px rgba(74, 144, 226, 0.8); }
+        footer a { color: #e0f7ff; text-decoration: none; margin: 0 25px; font-weight: 700; transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; }
+        footer a::before { content: ''; position: absolute; top: -8px; left: 50%; width: 0; height: 3px; background: #4a90e2; transition: all 0.7s ease; transform: translateX(-50%); border-radius: 2px; }
+        footer a:hover::before { width: 120%; }
+        footer a:hover { color: #fff; transform: translateY(-5px) scale(1.05); text-shadow: 0 0 20px rgba(74, 144, 226, 1); box-shadow: 0 10px 30px rgba(74, 144, 226, 0.5); }
         @media (max-width: 768px) {
-            .content-grid, .team-grid { grid-template-columns: 1fr; }
-            header h1 { font-size: 2.5em; }
-            header p { font-size: 1.2em; }
-            #gallery, #team { padding: 40px 20px; }
-            nav a { margin: 0 10px; font-size: 1em; }
+            .content-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.8em; }
+            header p { font-size: 1.3em; }
+            #gallery { margin: 30px; padding: 50px 25px; }
+            nav a { margin: 0 15px; font-size: 1em; }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Aster 4 Life</h1>
-        <p>Welcome to our community hub!</p>
+        <p>Explore Our Gallery</p>
     </header>
     <nav>
         <a href="index.html">Home</a> | <a href="gallery.html">Gallery</a> | <a href="team.html">Team</a>
@@ -150,7 +124,7 @@
         <div class="content-grid">
             <div class="content-item">
                 <img src="https://i.pinimg.com/736x/5a/73/93/5a7393ab3058b00119b4d692c1c4b1d3.jpg" alt="Astolfo cosplay at Comifuro event">
-                <p>Astolfo at Comifuro [November 15, 2023]</p>
+                <p>Astolfo at Comifuro [November 15, 2025]</p>
             </div>
             <div class="content-item">
                 <img src="https://i.pinimg.com/736x/a0/9f/e2/a09fe2acc5c92c7d8eee62b95c62d69d.jpg" alt="Screenshot from Discord Roblox Horror event">
@@ -158,53 +132,40 @@
             </div>
             <div class="content-item">
                 <img src="https://i.pinimg.com/736x/8a/78/2b/8a782bd857dc4e5cfe4582b57ffeead4.jpg" alt="Photo of special guest from out of town">
-                <p>Special guest from out of town [September 27, 2023]</p>
+                <p>Special guest from out of town [September 27, 2025]</p>
+            </div>
+            <div class="content-item">
+                <div style="padding:176.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141781908?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EhanGulingGuling"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <p>Ehan Guling [October 10, 2025]</p>
+            </div>
+            <div class="content-item">
+                <div style="padding:177.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141782612?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="AuliaAnjing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <p>Aulia Anjing [October 4, 2025]</p>
+            </div>
+            <div class="content-item">
+                <div style="padding:134.49% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141783368?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="QolbyRandomandCounter"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <p>Qolby Random [November 30, 2025]</p>
+            </div>
+            <div class="content-item">
+                <img src="https://i.pinimg.com/736x/03/14/cf/0314cfafab85ce42ad0bf3a4ffb7d0e7.jpg" alt="Casey">
+                <p>Kesi Jembod [February 14, 2024]</p>
+            </div>
+            <div class="content-item">
+                <img src="https://i.pinimg.com/736x/5b/e7/59/5be759054b7082319b4c227f554e6590.jpg" alt="Ibam">
+                <p>Ibam Beli Ciki (kesi:IJIN) [March 8, 2024]</p>
+            </div>
+            <div class="content-item">
+                <img src="https://i.pinimg.com/736x/74/7b/c8/747bc80a97d1483e7faf41ccd4c785c0.jpg" alt="Ehan">
+                <p>Ehan Roblox 2017 [gatau tanggalnya brapa]</p>
             </div>
         </div>
     </section>
-    <section id="team">
-        <h2>Our Team</h2>
-        <h3>Team Developer</h3>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/841338526124605510/76a6d8208e8eee73909894c83ebc2b42.png?size=1024" alt="Avatar of TB, Founder">
-                <h3>TB</h3>
-                <p>Founder</p>
-            </div>
-            <div class="team-member">
-                <img src="https://i.pinimg.com/736x/1b/b4/3d/1bb43d61ac82393c8d484ec98ae9ef80.jpg" alt="Avatar of Mbut, Owner">
-                <h3>Mbut</h3>
-                <p>Owner</p>
-            </div>
-            <div class="team-member">
-                <img src="https://cdn.discordapp.com/avatars/857208468733296661/808bc200fecbfc09a0d42edb80f4431d.png?size=1024" alt="Avatar of Aul, Co-Owner">
-                <h3>Aul</h3>
-                <p>Co-Owner</p>
-            </div>
-            <div class="team-member">
-                <img src="https://i.pinimg.com/736x/cb/9e/8a/cb9e8a885270c5590a887452bd6e64e6.jpg" alt="Avatar of Bams, Head Moderator">
-                <h3>Bams</h3>
-                <p>Head Moderator</p>
-            </div>
-            <div class="team-member">
-                <img src="https://i.pinimg.com/736x/55/60/5f/55605f455f0ec017b32dbfdb22de8f71.jpg" alt="Avatar of Ehan, Moderator">
-                <h3>Ehan</h3>
-                <p>Moderator</p>
-            </div>
-        </div>
-        <h3>Team Member</h3>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://i.pinimg.com/736x/05/e7/fa/05e7faaa70861cd2bd91ca8249a72f9d.jpg" alt="Avatar of Patir, Member">
-                <h3>Patir</h3>
-                <p>Member</p>
-            </div>
-            <div class="team-member">
-                <img src="https://i.pinimg.com/736x/70/0a/76/700a767298cf5eefa5e1e6e135876aea.jpg" alt="Avatar of Qolby, Member">
-                <h3>Qolby</h3>
-                <p>Member</p>
-            </div>
-            <div class="team-member">
-                <img src="https://i.pinimg.com/736x/e7/01/82/e70182c3db17d433d626d0de2c7fdc68.jpg" alt="Avatar of Ido, Member">
-                <h3>Ido</h3>
-                <p>Member</p>
+    <footer>
+        <p>&copy; 2025 Aster 4 Life. All rights reserved.</p>
+        <a href="https://www.youtube.com/channel/UCAtE7Gzbm4sW2FhstpqCDcg" target="_blank" rel="noopener noreferrer">YouTube</a> |
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+        <a href="https://discord.gg/y2E2WGQz2D" target="_blank" rel="noopener noreferrer">Discord</a> |
+        <a href="https://www.tiktok.com/@aster4lifee?_r=1&_t=ZS-91fdYptruaG" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </footer>
+</body>
+</html>
